@@ -96,3 +96,12 @@ function notes() {
         alert("please provide a grade between 0 and 100 ");
     }
 }
+
+
+function resize(){
+
+	var w= window.outerWidth;
+	var h = window.outerHeight;
+	var result = "width is "+ w +" px"+" and hight is "+h + " px";
+	document.getElementById("size").innerHTML=result;
+}
