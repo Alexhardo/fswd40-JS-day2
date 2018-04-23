@@ -22,8 +22,45 @@ function AgeCalculator(by1) {
     var by = document.getElementById("by1").value;
     var birthyear = Number(by);
     var age = current - birthyear;
-    var age1 = age -1;
-    var msg1 = "You are either  " + age + "  years old or "+age1+"";
+    var age1 = age - 1;
+    var msg1 = "You are either  " + age + "  years old or " + age1 + "";
     document.getElementById("outputtxt1").innerHTML = msg1;
 
 }
+
+
+function converter() {
+
+    var degree1 = document.getElementById("degree").value;
+    var newdegree = Number(degree1);
+    var pai = Math.PI;
+    var rad = newdegree * (pai / 180);
+    var numb = rad;
+    rad = rad.toFixed(2);
+    var msg3 = "the Value of " + newdegree + " degree is " + rad + " Radian";
+    document.getElementById("degtorad").innerHTML = msg3;
+
+}
+
+
+function Volume1() {
+    var height1 = document.getElementById("height").value;
+    var width1 = document.getElementById("width").value;
+    var depth1 = document.getElementById("depth").value;
+    var newheight = Number(height1);
+    var newwidth = Number(width1);
+    var newdepth = Number(depth1);
+
+    var area = newheight*newwidth;
+    var volume = area * newdepth;
+    var msg5= "the value of the surface is "+area+" and the value of the volume is " +volume;
+
+return document.getElementById("Volume2").innerHTML = msg5;
+   
+
+}    
+
+
+
+
+
