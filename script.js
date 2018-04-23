@@ -60,12 +60,39 @@ function Volume1() {
 }
 
 ///////////////////////////
-function error1(){
-try {
-    var person = prompts("Please enter your name", "Harry Potter");
-    document.getElementById("message").innerHTML = "Hello " + person + "! How are you today?";
+function error1() {
+    try {
+        var person = prompts("Please enter your name", "Harry Potter");
+        document.getElementById("message").innerHTML = "Hello " + person + "! How are you today?";
 
-} catch (err) {
-    alert(err.message+ ",  please check the code");
+    } catch (err) {
+        alert(err.message + ",  please check the code");
+    }
 }
+
+function cap() {
+    var str = document.getElementById("cap").value;
+    var res = str.charAt(0).toUpperCase();
+    document.getElementById("up").innerHTML = res + str.slice(1);
+}
+
+function notes() {
+
+
+    var mth1 = Number(document.getElementById("mth").value);
+    var phys1 = Number(document.getElementById("phys").value);
+    var eng1 = Number(document.getElementById("eng").value);
+
+    if ((mth1 >= 0 && mth1 <= 100) && (phys1 >= 0 && phys1 <= 100) && (eng1 >= 0 && eng1 <= 100)) {
+
+        var sum, avg;
+        sum = mth1 + phys1 + eng1;
+        avg = sum / 3;
+        avg = avg.toFixed(2);
+        document.getElementById("smavg").innerHTML = ("the sum of all grades is :" + sum +" ,and the average is : "+ avg);
+
+
+    } else {
+        alert("please provide a grade between 0 and 100 ");
+    }
 }
