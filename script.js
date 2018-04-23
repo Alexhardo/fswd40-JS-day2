@@ -51,16 +51,21 @@ function Volume1() {
     var newwidth = Number(width1);
     var newdepth = Number(depth1);
 
-    var area = newheight*newwidth;
+    var area = newheight * newwidth;
     var volume = area * newdepth;
-    var msg5= "the value of the surface is "+area+" and the value of the volume is " +volume;
+    var msg5 = "the value of the surface is " + area + " and the value of the volume is " + volume;
 
-return document.getElementById("Volume2").innerHTML = msg5;
-   
+    // return msg5;
+    document.getElementById("Volume2").innerHTML = msg5;
+}
 
-}    
+///////////////////////////
+function error1(){
+try {
+    var person = prompts("Please enter your name", "Harry Potter");
+    document.getElementById("message").innerHTML = "Hello " + person + "! How are you today?";
 
-
-
-
-
+} catch (err) {
+    alert(err.message+ ",  please check the code");
+}
+}
