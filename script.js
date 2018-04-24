@@ -102,6 +102,6 @@ function resize(){
 
 	var w= window.outerWidth;
 	var h = window.outerHeight;
-	var result = "width is "+ w +" px"+" and hight is "+h + " px";
+	var result = "width is "+ w +" px"+" and height is "+h + " px";
 	document.getElementById("size").innerHTML=result;
 }
